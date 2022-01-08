@@ -3,12 +3,20 @@ import { RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '',
-    redirect: '/folder/Inbox'
+    path: '/trips/proposals',
+    component: () => import ('../views/TripProposalView.vue')
   },
   {
-    path: '/folder/:id',
-    component: () => import ('../views/FolderPage.vue')
+    path: '/trips/saved',
+    component: () => import ('../views/TripSavedView.vue')
+  },
+  {
+    path: '/trip/:id',
+    component: () => import ('../views/TripDetailView.vue')
+  },
+  {
+    path: '/',
+    component: () => import ('../views/HomeView.vue')
   }
 ]
 
@@ -17,4 +25,10 @@ const router = createRouter({
   routes
 })
 
+//CONTEXT + PLACE
+
 export default router
+
+
+
+
