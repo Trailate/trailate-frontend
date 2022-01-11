@@ -1,22 +1,25 @@
-#proposalRow1 {
-    margin-bottom: 8px;
+.proposalRow1 {
+    margin-bottom: 4px;
+    align-items: center;
 
     ion-text {
         margin-left: 8px;
     }
 }
 
-#proposalRow2 {
+.proposalRow2 {
     justify-content: space-between;
     align-items: center;
 
-    #proposalLine {
+    div {
         display: flex;
         align-items: center;
         width: 70%;
         
        hr {
-           width: 100%;
+           width: 90%;
+           height: 3px;
+           border-radius: 9px;
            background-color: black;
        }
 
