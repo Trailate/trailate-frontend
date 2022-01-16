@@ -11,7 +11,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import ('../views/TripSavedView.vue')
   },
   {
-    path: '/trip/:id',
+    path: '/trip/1', // change back to :id
     component: () => import ('../views/TripDetailView.vue')
   },
   {
