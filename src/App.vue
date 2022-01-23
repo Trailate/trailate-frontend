@@ -7,6 +7,9 @@
             <ion-list-header>Trailate</ion-list-header>
             <ion-note>Be notified when your train runs late!</ion-note>
 
+            <!-- Animated Searchbar -->
+            <ion-searchbar debounce="1000"></ion-searchbar>
+
             <ion-menu-toggle
               auto-hide="false"
               v-for="(p, i) in appPages"
