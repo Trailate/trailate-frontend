@@ -32,7 +32,7 @@
           </ion-list>
         </ion-content>
       </ion-menu>
-      <ion-router-outlet id="main-content"></ion-router-outlet>
+      <ion-router-outlet id="main-content"> </ion-router-outlet>
     </ion-split-pane>
   </ion-app>
 </template>
@@ -92,7 +92,7 @@ export default defineComponent({
     const appPages = [
       {
         title: "My Trips",
-        url: "/trips/saved",
+        url: "/test",
         iosIcon: subway,
         mdIcon: subway,
       },
