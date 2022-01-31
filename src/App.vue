@@ -7,89 +7,34 @@
             <ion-list-header>Trailate</ion-list-header>
             <ion-note>Be notified when your train runs late!</ion-note>
 
-            <!-- Animated Searchbar -->
-            <ion-searchbar debounce="1000"></ion-searchbar>
-
-            <ion-menu-toggle
-              auto-hide="false"
-              v-for="(p, i) in appPages"
-              :key="i"
-            >
-              <ion-item
-                @click="selectedIndex = i"
-                router-direction="root"
-                :router-link="p.url"
-                lines="none"
-                detail="false"
-                class="hydrated"
-                :class="{ selected: selectedIndex === i }"
-              >
-                <ion-icon
-                  slot="start"
-                  :ios="p.iosIcon"
-                  :md="p.mdIcon"
-                ></ion-icon>
+            <ion-menu-toggle auto-hide="false" v-for="(p, i) in appPages" :key="i">
+              <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
+                <ion-icon slot="start" :ios="p.iosIcon" :md="p.mdIcon"></ion-icon>
                 <ion-label>{{ p.title }}</ion-label>
               </ion-item>
             </ion-menu-toggle>
+
           </ion-list>
         </ion-content>
       </ion-menu>
-      <ion-router-outlet id="main-content"></ion-router-outlet>
+      <ion-router-outlet id="main-content">
+        <ion-searchbar debounce="1000"></ion-searchbar>
+        <ion-searchbar debounce="1000"></ion-searchbar>
+      </ion-router-outlet>
     </ion-split-pane>
   </ion-app>
 </template>
 
 <script lang="ts">
-import {
-  IonApp,
-  IonContent,
-  IonIcon,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonListHeader,
-  IonMenu,
-  IonMenuToggle,
-  IonNote,
-  IonRouterOutlet,
-  IonSplitPane,
-} from "@ionic/vue";
+import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane,} from "@ionic/vue";
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
-import {
-  archiveOutline,
-  archiveSharp,
-  bookmarkOutline,
-  bookmarkSharp,
-  heartOutline,
-  heartSharp,
-  subway,
-  mailSharp,
-  person,
-  paperPlaneSharp,
-  trashOutline,
-  trashSharp,
-  warningOutline,
-  warningSharp,
-} from "ionicons/icons";
+import { archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, subway, mailSharp, person, paperPlaneSharp, trashOutline, trashSharp, 
+warningOutline, warningSharp,} from "ionicons/icons";
 
 export default defineComponent({
   name: "App",
-  components: {
-    IonApp,
-    IonContent,
-    IonIcon,
-    IonItem,
-    IonLabel,
-    IonList,
-    IonListHeader,
-    IonMenu,
-    IonMenuToggle,
-    IonNote,
-    IonRouterOutlet,
-    IonSplitPane,
-  },
+  components: {IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane,},
   setup() {
     const selectedIndex = ref(0);
     const appPages = [
@@ -117,29 +62,18 @@ export default defineComponent({
     const route = useRoute();
 
     return {
-      selectedIndex,
-      appPages,
-      archiveOutline,
-      archiveSharp,
-      bookmarkOutline,
-      bookmarkSharp,
-      heartOutline,
-      heartSharp,
-      subway,
-      mailSharp,
-      person,
-      paperPlaneSharp,
-      trashOutline,
-      trashSharp,
-      warningOutline,
-      warningSharp,
+      selectedIndex, appPages, archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, subway, mailSharp, 
+      person, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp,
       isSelected: (url: string) => (url === route.path ? "selected" : ""),
     };
   },
 });
 </script>
 
+
+
 <style scoped>
+
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
