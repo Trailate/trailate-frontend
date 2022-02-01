@@ -1,0 +1,87 @@
+#trip {
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    ion-row {
+        align-items: center;
+        margin-bottom: .25em;
+    }
+}
+
+.proposalRow1 {
+    ion-text {
+        margin-left: 8px;
+    }
+}
+
+.proposalRow2 {
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        
+       hr {
+           width: 90%;
+           height: 3px;
+           border-radius: 9px;
+           background-color: black;
+       }
+
+        i {
+            color: black;
+            font-size: 16px;
+        }
+    }
+
+}
+
+#tripChanges {
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    ion-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1em;
+
+        ion-text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ion-button {
+            margin: 0 !important;
+        }
+
+        ion-toggle {
+            --background-checked: #eb445a;
+            --handle-background: #eb445a;
+            --handle-background-checked: #eb445a;
+        }
+    }
+
+}
+
+ion-modal {
+
+    ion-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ion-button {
+            --background-checked: #eb445a;
+            --handle-background: #eb445a;
+            --handle-background-checked: #eb445a;
+        }
+    }
+
+    #modalRow1 {
+        margin-top: 1em;
+    }
+}
