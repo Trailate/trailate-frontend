@@ -26,7 +26,6 @@ import "@ionic/vue/css/display.css";
 import "./theme/variables.css";
 
 const app = createApp(App).use(IonicVue).use(router);
-console.log(Capacitor.isPluginAvailable("PushNotifications"));
 
 if (Capacitor.isPluginAvailable("PushNotifications")) {
   app.use(initNotifications);
