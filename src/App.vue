@@ -38,6 +38,7 @@
 </template>
 
 <script lang="ts">
+import SearchbarField from "./views/Searchbar.vue";
 import {
   IonApp,
   IonContent,
@@ -69,6 +70,7 @@ import {
   trashSharp,
   warningOutline,
   warningSharp,
+  home,
 } from "ionicons/icons";
 
 export default defineComponent({
@@ -91,6 +93,12 @@ export default defineComponent({
     const selectedIndex = ref(0);
     const appPages = [
       {
+        title: "Home",
+        url: "/home",
+        iosIcon: home,
+        mdIcon: home,
+      },
+      {
         title: "My Trips",
         url: "/test",
         iosIcon: subway,
@@ -98,7 +106,7 @@ export default defineComponent({
       },
       {
         title: "My Profile",
-        url: "/profile/:id",
+        url: "/profile/id",
         iosIcon: person,
         mdIcon: person,
       },
@@ -255,5 +263,9 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+ion-item {
+  cursor: pointer;
 }
 </style>
