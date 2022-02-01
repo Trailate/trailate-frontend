@@ -1,22 +1,3 @@
-ion-card-header {
-    text-align: center;
-}
-
-ion-row {
-    align-items: center;
-}
-
-#weekdays {
-    justify-content: left;
-
-    ion-button {
-        width: 36px;
-        margin-right: .5em;
-    }
-}
-
-ion-toggle {
-    --background-checked: #eb445a;
-    --handle-background: #eb445a;
-    --handle-background-checked: #eb445a;
+#list {
+    margin-top: 4em;
 }
