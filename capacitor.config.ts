@@ -1,10 +1,15 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'trailate',
-  webDir: 'dist',
-  bundledWebRuntime: false
+  appId: "ch.trailate.app",
+  appName: "Trailate",
+  webDir: "dist",
+  bundledWebRuntime: false,
+  plugins: {
+    PushNotifications: {
+      presentationOptions: ["badge", "sound", "alert"],
+    },
+  },
 };
 
 export default config;
