@@ -3,9 +3,9 @@
 <template>
   <ion-page>
     <div class="searchbar-section">
-      <ion-searchbar class="searchbar-from" placeholder="From"></ion-searchbar>
-      <ion-searchbar class="searchbar-to" placeholder="To"></ion-searchbar>
-    </ion-content>
+      <ion-searchbar color="light" class="searchbar-from" placeholder="From"></ion-searchbar>
+      <ion-searchbar color="light" class="searchbar-to" placeholder="To"></ion-searchbar>
+    </div>
   </ion-page>
 </template>
 
@@ -22,19 +22,14 @@ export default {
 <style>
   .searchbar-section {
     min-width: 30%;
-    max-width: 60%;
+    max-width: 80%;
+    width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .searchbar-from {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .searchbar-to {
-    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 </style>
