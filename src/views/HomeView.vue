@@ -2,8 +2,8 @@
 
 <template>
   <ion-page>
-    <div class="searchbar-section">
-      <ion-searchbar
+    <div class="searchitem-section">
+      <!-- <ion-searchbar
         color="light"
         class="searchbar-from"
         placeholder="From"
@@ -12,25 +12,50 @@
         color="light"
         class="searchbar-to"
         placeholder="To"
-      ></ion-searchbar>
+      ></ion-searchbar> -->
+
+      <ion-item class="item-from">
+        <ion-label position="floating">From</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="item-to">
+        <ion-label position="floating">To</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <div id="app">
+        {{ info }}
+      </div>
     </div>
   </ion-page>
 </template>
 
-<script lang="ts">
-import { IonPage, IonContent } from "@ionic/vue";
+<script>
+import { IonPage } from "@ionic/vue";
+import axios from "axios";
 
 export default {
   components: {
     IonPage,
-    IonContent,
+  },
+
+  el: "#app",
+  data() {
+    return {
+      info: "",
+    };
+  },
+  mounted() {
+    axios
+      .get("https://trailate.com/api/v1/train/routesearch?from=Bern&to=Basel")
+      .then((response) => (this.info = response.data));
   },
 };
 </script>
 
 <style>
-.searchbar-section {
-  min-width: 30%;
+.searchitem-section {
   max-width: 80%;
   width: 80%;
   display: block;
