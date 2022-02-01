@@ -2,7 +2,7 @@ import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
   appId: "ch.trailate.app",
-  appName: "trailate",
+  appName: "Trailate",
   webDir: "dist",
   bundledWebRuntime: false,
   plugins: {
