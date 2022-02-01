@@ -38,9 +38,6 @@
 </template>
 
 <script lang="ts">
-import axios from "axios";
-axios.get("https://lorispolenz.com");
-
 import {
   IonApp,
   IonContent,
