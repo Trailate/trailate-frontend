@@ -15,17 +15,17 @@
             </ion-menu-toggle>
 
           </ion-list>
+          <SearchbarField />
         </ion-content>
       </ion-menu>
       <ion-router-outlet id="main-content">
-        <ion-searchbar debounce="1000"></ion-searchbar>
-        <ion-searchbar debounce="1000"></ion-searchbar>
-      </ion-router-outlet>
+      </ion-router-outlet> 
     </ion-split-pane>
   </ion-app>
 </template>
 
 <script lang="ts">
+import SearchbarField from './views/Searchbar.vue';
 import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane,} from "@ionic/vue";
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
@@ -34,7 +34,7 @@ warningOutline, warningSharp,} from "ionicons/icons";
 
 export default defineComponent({
   name: "App",
-  components: {IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane,},
+  components: {IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, SearchbarField,},
   setup() {
     const selectedIndex = ref(0);
     const appPages = [
