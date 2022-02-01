@@ -12,7 +12,7 @@
 
     <ion-content>
       <ion-list id="list">
-        <trip-component></trip-component>
+        <trip-component href="/trips/proposals"></trip-component>
         <trip-changes-component></trip-changes-component>
       </ion-list>
 
