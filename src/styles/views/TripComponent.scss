@@ -48,12 +48,6 @@
         justify-content: space-between;
         margin-bottom: 1em;
 
-        ion-text{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         ion-button {
             margin: 0 !important;
         }
@@ -68,20 +62,68 @@
 }
 
 ion-modal {
+    div {
+        margin: 1em 3em;
 
-    ion-row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        h3 {
+            font-weight: bold;
+            color: #eb445a;
+        }
 
         ion-button {
-            --background-checked: #eb445a;
-            --handle-background: #eb445a;
-            --handle-background-checked: #eb445a;
+            margin-top: .75em;
+        }
+
+        ion-textarea {
+            margin-top: .5em;
+            background-color: #f4f5f8;
+            border-radius: 9px;
+            padding-left: 1em;
+        }
+
+        #addContact {
+            display: flex;
+            align-items: center;
+            margin: .5em 0;
+            justify-content: space-between;
+
+            ion-input {
+                background-color: #f4f5f8;
+                border-radius: 9px;
+                max-width: 85% !important;
+            }
+
+            ion-button {
+                height: 2em;
+                width: 10%;
+
+            }
+        }
+
+        #listContacts {
+            display: flex;
+            flex-direction: column;
+
+            ion-text {
+                margin: .3em 0;
+            }
+        }
+
+        ion-list {
+            display: flex;
+            text-align: left;
+            
+            ion-item {
+                border-radius: 9px;
+            }
         }
     }
+}
 
-    #modalRow1 {
-        margin-top: 1em;
-    }
+.weekday {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .25em 0;
+    margin: .25em 0;
 }
