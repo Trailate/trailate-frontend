@@ -15,10 +15,10 @@
             </ion-menu-toggle>
 
           </ion-list>
-          <SearchbarField />
         </ion-content>
       </ion-menu>
       <ion-router-outlet id="main-content">
+        
       </ion-router-outlet> 
     </ion-split-pane>
   </ion-app>
@@ -30,14 +30,20 @@ import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader,
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
 import { archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, subway, mailSharp, person, paperPlaneSharp, trashOutline, trashSharp, 
-warningOutline, warningSharp,} from "ionicons/icons";
+warningOutline, warningSharp, home} from "ionicons/icons";
 
 export default defineComponent({
   name: "App",
-  components: {IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, SearchbarField,},
+  components: {IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane,},
   setup() {
     const selectedIndex = ref(0);
     const appPages = [
+      {
+        title: "Home",
+        url: "/home",
+        iosIcon: home,
+        mdIcon: home,
+      },
       {
         title: "My Trips",
         url: "/trips/saved",
@@ -46,7 +52,7 @@ export default defineComponent({
       },
       {
         title: "My Profile",
-        url: "/profile/:id",
+        url: "/profile/id",
         iosIcon: person,
         mdIcon: person,
       },
