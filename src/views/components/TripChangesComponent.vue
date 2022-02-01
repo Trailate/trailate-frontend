@@ -92,7 +92,7 @@
                     <h3>Kontakte</h3>
                     <ion-row id="addContact">
                         <ion-input inputmode="email"></ion-input>
-                        <ion-button color="danger"><i class='bx bx-plus-medical' ></i></ion-button>
+                        <ion-button color="danger" size="small"><i class='bx bx-plus-medical' ></i></ion-button>
                     </ion-row>
                     <ion-row id="listContacts">
                         <ion-text>example@gmail.com</ion-text>
