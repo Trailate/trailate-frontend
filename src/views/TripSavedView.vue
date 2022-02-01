@@ -14,8 +14,8 @@
 
       <ion-list id="list">
         <trip-component href="/trip/1"></trip-component>
-        <trip-component href="/trip/2"></trip-component>
-        <trip-component href="/trip/3"></trip-component>
+        <trip-component href="/trip/1"></trip-component>
+        <trip-component href="/trip/1"></trip-component>
       </ion-list>
 
       <ion-infinite-scroll threshold="100px" id="infinite-scroll">
