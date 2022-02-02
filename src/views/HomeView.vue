@@ -32,12 +32,15 @@
 </template>
 
 <script>
-import { IonPage } from "@ionic/vue";
+import { IonPage, IonItem, IonLabel, IonInput,  } from "@ionic/vue";
 import axios from "axios";
 
 export default {
   components: {
     IonPage,
+    IonItem,
+    IonLabel,
+    IonInput,
   },
 
   el: "#app",
@@ -48,7 +51,9 @@ export default {
   },
   mounted() {
     axios
-      .get("https://trailate.com/api/v1/train/routesearch?from=Bern&to=Basel")
+      //.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+      //.get("https://trailate.com/api/v1/train/routesearch")
+      .get('http://tralate.com/api/v1/train/routesearch?from=Bern&to=Basel&time=10')
       .then((response) => (this.info = response.data));
   },
 };
