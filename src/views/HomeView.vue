@@ -46,14 +46,13 @@ export default {
   el: "#app",
   data() {
     return {
-      info: "",
+      info: " ",
     };
   },
   mounted() {
     axios
       //.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-      //.get("https://trailate.com/api/v1/train/routesearch")
-      .get('http://tralate.com/api/v1/train/routesearch?from=Bern&to=Basel&time=10')
+      .get('https://trailate.com/api/v1/train/routesearch/?from=Waffenplatzstrasse&to=SihlcityNord')
       .then((response) => (this.info = response.data));
   },
 };

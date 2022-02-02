@@ -38,7 +38,6 @@
 </template>
 
 <script lang="ts">
-import SearchbarField from "./views/Searchbar.vue";
 import {
   IonApp,
   IonContent,
