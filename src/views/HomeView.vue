@@ -2,23 +2,15 @@
 
 <template>
   <ion-page>
-    <div class="grid-container">
-      <div class="grid-item">
+    <div class="grid-container-title">
+      <div class="grid-item-title">
         <h1>Welcome to Trailate</h1>
       </div>
-      <div class="grid-item">
-        <div class="searchitem-section">
-          <!-- <ion-searchbar
-            color="light"
-            class="searchbar-from"
-            placeholder="From"
-          ></ion-searchbar>
-          <ion-searchbar
-            color="light"
-            class="searchbar-to"
-            placeholder="To"
-          ></ion-searchbar> -->
-          <ion-item class="item-from">
+    </div>
+
+    <div class="grid-container-search">
+      <div class="grid-item-search">
+        <ion-item class="item-from">
             <ion-label position="floating">From</ion-label>
             <ion-input></ion-input>
           </ion-item>
@@ -27,14 +19,27 @@
             <ion-label position="floating">To</ion-label>
             <ion-input></ion-input>
           </ion-item>
-
-          <div id="app">
-            {{ info }}
-          </div>
-        </div>
       </div>
     </div>
 
+
+<!--
+    <div class="searchitem-section">
+      <ion-item class="item-from">
+        <ion-label position="floating">From</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="item-to">
+        <ion-label position="floating">To</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <div id="app">
+        {{ info }}
+      </div>
+    </div>
+-->
 
   </ion-page>
 </template>
@@ -79,20 +84,40 @@ export default {
   transform: translate(-50%, -50%);
 }
 
-.grid-container {
+.grid-container-title {
   display: grid;
   grid-template-columns: auto;
-  background-color: #262626;
   padding: 5%;
   margin: 5%;
 }
 
-.grid-item {
+.grid-container-search {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 5%;
+  margin: 5%;
+}
+
+.grid-item-title {
   padding: 1%;
   margin: 1%;
   font-size: 20vw;
   text-align: center;
-  font-weight: bold;
+
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grid-item-search {
+  padding: 1%;
+  margin: 1%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%
 }
 
 </style>
