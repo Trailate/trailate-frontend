@@ -1,30 +1,27 @@
 <template>
-  <h1>Test</h1>
-  {{ data }}
+  <div>
+    <h1>Test</h1>
+  </div>
 </template>
 
 <script>
-import { Geolocation } from "@capacitor/geolocation";
+import { Geofence } from "@ionic-native/geofence/vue";
 import { instance } from "../common/api";
 
 export default {
   name: "Test-component",
-  data: () => ({
-    data: "",
-  }),
-  mounted() {
+  data: () => ({}),
+  async mounted() {
     console.log("Initializing HomePage");
 
-    instance
-      .get("train/routesearch?from=Bern&to=Basel")
-      .then((res) => console.log(res));
+    //console.log(await Geolocation.getCurrentPosition());
 
-    Geolocation.watchPosition({ enableHighAccuracy: true }, (pos, err) => {
-      if (err) return err;
-
-      console.log(pos);
-      return pos;
-    });
+    // initialize the plugin
+    Geofence.initialize().then(
+      // resolved promise does not return a value
+      () => console.log("Geofence Plugin Ready"),
+      (err) => console.log(err)
+    );
 
     console.log("mounted");
   },
