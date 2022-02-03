@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import { initNotifications } from "./common/notifications";
+import { Capacitor } from "@capacitor/core";
 
 import { IonicVue } from "@ionic/vue";
 
@@ -24,7 +25,11 @@ import "@ionic/vue/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 
-const app = createApp(App).use(IonicVue).use(router).use(initNotifications);
+const app = createApp(App).use(IonicVue).use(router);
+
+if (Capacitor.isPluginAvailable("PushNotifications")) {
+  app.use(initNotifications);
+}
 
 router.isReady().then(() => {
   app.mount("#app");
