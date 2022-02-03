@@ -10,18 +10,20 @@ function initNotifications() {
   });
 
   PushNotifications.addListener("registration", (token) => {
-    fetch("http://example.com/api/endpoint/", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        userId: "getUserToken",
-        fcmToken: token.value,
-      }),
-    }).then((res) => {
-      console.log(res);
-    });
+    // fetch("http://example.com/api/endpoint/", {
+    //   method: "post",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     userId: "getUserToken",
+    //     fcmToken: token.value,
+    //   }),
+    // }).then((res) => {
+    //   console.log(res);
+    // });
+
+    console.log(token.value);
   });
 
   PushNotifications.addListener("registrationError", (error) => {

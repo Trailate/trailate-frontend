@@ -18,12 +18,11 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonContent } from "@ionic/vue";
+import { IonPage } from "@ionic/vue";
 
 export default {
   components: {
     IonPage,
-    IonContent,
   },
 };
 </script>
