@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import SearchBar from "@/views/SearchBar.vue";
+import SearchBar from "@/views/Searchbar.vue";
 
 describe("SearchBar.vue", () => {
   it("renders folder view", () => {
