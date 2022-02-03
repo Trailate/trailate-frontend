@@ -2,9 +2,11 @@
 
 <template>
   <ion-page>
+
     <div class="grid-container-title">
       <div class="grid-item-title">
-        <h1>Welcome to Trailate</h1>
+        <h1 class="titleh1">Trailate</h1>
+        <h2 class="titleh2">Don't Stress!</h2>
       </div>
     </div>
 
@@ -14,11 +16,16 @@
             <ion-label position="floating">From</ion-label>
             <ion-input></ion-input>
           </ion-item>
-
           <ion-item class="item-to">
             <ion-label position="floating">To</ion-label>
             <ion-input></ion-input>
           </ion-item>
+      </div>
+    </div>
+
+    <div class="grid-container-button">
+      <div class="grid-item-button">
+        <ion-button @click="goToHome()" color="danger" expand="block" fill="clear">Search Connection</ion-button>
       </div>
     </div>
 
@@ -45,7 +52,7 @@
 </template>
 
 <script>
-import { IonPage, IonItem, IonLabel, IonInput, } from "@ionic/vue";
+import { IonPage, IonItem, IonLabel, IonInput } from "@ionic/vue";
 import axios from "axios";
 
 export default {
@@ -54,6 +61,13 @@ export default {
     IonItem,
     IonLabel,
     IonInput,
+  },
+
+  //inside the script section, define the function:
+ methods:{
+   goToHome(){
+   this.$router.push('/trips/proposals'); 
+      }
   },
 
   el: "#app",
@@ -69,6 +83,9 @@ export default {
       .then((response) => (this.info = response.data));
   },
 };
+
+//if the route accepts params, you can also use
+//this.$router.push({name:'home', params: {id: '[paramdata]'}}); 
 </script>
 
 <style>
@@ -85,6 +102,13 @@ export default {
 }
 
 .grid-container-title {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 5%;
+  margin: 5%;
+}
+
+.grid-container-button {
   display: grid;
   grid-template-columns: auto;
   padding: 5%;
@@ -114,10 +138,31 @@ export default {
   padding: 1%;
   margin: 1%;
   position: fixed;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%
 }
 
+.grid-item-button {
+  padding: 1%;
+  margin: 1%;
+  font-size: 20vw;
+  text-align: center;
+
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.titleh1 {
+ font-weight: 700;
+ font-size: 34px;
+}
+
+.titleh2 {
+ font-weight: 500;
+ font-size: 20px;
+}
 </style>
