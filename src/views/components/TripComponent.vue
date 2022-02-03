@@ -21,12 +21,16 @@
 </template>
 
 <script lang="ts">
-import { IonCard } from "@ionic/vue";
-import 'boxicons';
+import { IonCard, IonBadge, IonText, IonRow, IonCardContent } from "@ionic/vue";
+import "boxicons";
 
 export default {
   components: {
     IonCard,
+    IonBadge,
+    IonText,
+    IonRow,
+    IonCardContent,
   },
 };
 </script>

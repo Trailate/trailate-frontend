@@ -109,12 +109,33 @@
 </template>
 
 <script>
-  import { IonModal, IonCard } from '@ionic/vue';
+import {
+  IonModal,
+  IonCard,
+  IonInput,
+  IonText,
+  IonButton,
+  IonTextarea,
+  IonContent,
+  IonRow,
+  IonCardContent,
+  IonCheckbox,
+  IonToggle,
+} from "@ionic/vue";
 
 export default {
   components: {
-    IonCard,
     IonModal,
+    IonCard,
+    IonInput,
+    IonText,
+    IonButton,
+    IonTextarea,
+    IonContent,
+    IonRow,
+    IonCardContent,
+    IonCheckbox,
+    IonToggle,
   },
 };
 </script>

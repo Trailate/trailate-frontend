@@ -1,34 +1,26 @@
 <style lang="scss" scoped src="@/styles/views/HomeView.scss"></style>
 
 <template>
-  <ion-page>
 
-    <div class="grid-container-title">
-      <div class="grid-item-title">
-        <h1 class="titleh1">Trailate</h1>
-        <h2 class="titleh2">Don't Stress!</h2>
+    <div class="hv-container">
+
+      <div class="hv-header">
+        <h1>Trailate</h1>
       </div>
-    </div>
 
-    <div class="grid-container-search">
-      <div class="grid-item-search">
-        <ion-item class="item-from">
-            <ion-label position="floating">From</ion-label>
+      <div class="hv-body">
+
+          <ion-label position="floating">Start</ion-label>
             <ion-input></ion-input>
-          </ion-item>
-          <ion-item class="item-to">
-            <ion-label position="floating">To</ion-label>
+
+          <ion-label position="floating">Destination</ion-label>
             <ion-input></ion-input>
-          </ion-item>
-      </div>
-    </div>
 
-    <div class="grid-container-button">
-      <div class="grid-item-button">
-        <ion-button @click="goToHome()" color="danger" expand="block" fill="clear">Search Connection</ion-button>
-      </div>
-    </div>
+          <ion-button @click="goToHome()" color="danger" expand="block" strong="true">Search Connection</ion-button>
 
+      </div>
+
+    </div>
 
 <!--
     <div class="searchitem-section">
@@ -48,17 +40,15 @@
     </div>
 -->
 
-  </ion-page>
+
 </template>
 
 <script>
-import { IonPage, IonItem, IonLabel, IonInput } from "@ionic/vue";
+import { IonLabel, IonInput } from "@ionic/vue";
 import axios from "axios";
 
 export default {
   components: {
-    IonPage,
-    IonItem,
     IonLabel,
     IonInput,
   },
