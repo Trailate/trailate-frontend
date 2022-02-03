@@ -32,7 +32,7 @@
           </ion-list>
         </ion-content>
       </ion-menu>
-      <ion-router-outlet id="main-content"></ion-router-outlet>
+      <ion-router-outlet id="main-content"> </ion-router-outlet>
     </ion-split-pane>
   </ion-app>
 </template>
@@ -69,6 +69,7 @@ import {
   trashSharp,
   warningOutline,
   warningSharp,
+  home,
 } from "ionicons/icons";
 
 export default defineComponent({
@@ -91,6 +92,12 @@ export default defineComponent({
     const selectedIndex = ref(0);
     const appPages = [
       {
+        title: "Home",
+        url: "/home",
+        iosIcon: home,
+        mdIcon: home,
+      },
+      {
         title: "My Trips",
         url: "/trips/saved",
         iosIcon: subway,
@@ -98,7 +105,7 @@ export default defineComponent({
       },
       {
         title: "My Profile",
-        url: "/profile/:id",
+        url: "/home",
         iosIcon: person,
         mdIcon: person,
       },
@@ -255,5 +262,9 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+ion-item {
+  cursor: pointer;
 }
 </style>
