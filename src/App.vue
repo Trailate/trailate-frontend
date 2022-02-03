@@ -99,13 +99,13 @@ export default defineComponent({
       },
       {
         title: "My Trips",
-        url: "/test",
+        url: "/trips/saved",
         iosIcon: subway,
         mdIcon: subway,
       },
       {
         title: "My Profile",
-        url: "/profile/id",
+        url: "/home",
         iosIcon: person,
         mdIcon: person,
       },
