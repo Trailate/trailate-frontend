@@ -10,14 +10,14 @@
 </template>
 
 <script lang="ts">
-import { IonPage } from "@ionic/vue";
-import { IonSearchbar } from "@ionic/vue";
+import { IonPage, IonSearchbar, IonContent } from "@ionic/vue";
 
 export default {
   name: "SearchbarField",
   components: {
     IonPage,
     IonSearchbar,
+    IonContent,
   },
 };
 </script>
