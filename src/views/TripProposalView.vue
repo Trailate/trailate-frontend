@@ -10,6 +10,7 @@
   <ion-page>
     <ion-content>
       <ion-list id="list">
+        <searchbar-component></searchbar-component>
         <trip-component href="/trip/1"></trip-component>
         <trip-component href="/trip/1"></trip-component>
         <trip-component href="/trip/1"></trip-component>
@@ -38,11 +39,13 @@ import {
   IonContent,
 } from "@ionic/vue";
 import TripComponent from "./components/TripComponent.vue";
+import SearchbarComponent from "./components/SearchbarComponent.vue";
 import "boxicons";
 
 export default {
   components: {
     TripComponent,
+    SearchbarComponent,
     IonPage,
     IonTitle,
     IonToolbar,

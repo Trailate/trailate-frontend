@@ -36,7 +36,6 @@
 
 <script>
 import { IonLabel, IonInput, IonButton } from "@ionic/vue";
-import axios from "axios";
 
 export default {
   components: {

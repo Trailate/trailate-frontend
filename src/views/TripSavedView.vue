@@ -24,7 +24,7 @@
       </ion-infinite-scroll>
 
       <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-        <ion-fab-button color="danger" href="/trips/proposals">
+        <ion-fab-button color="danger" href="/home/">
           <i class="bx bx-plus-medical"></i>
         </ion-fab-button>
       </ion-fab>
