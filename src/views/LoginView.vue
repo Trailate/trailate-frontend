@@ -7,20 +7,29 @@
     </div>
 
     <div class="hv-body">
-      <ion-label position="floating">Start</ion-label>
+      <ion-label position="floating">username</ion-label>
       <ion-input></ion-input>
 
-      <ion-label position="floating">Destination</ion-label>
+      <ion-label position="floating">password</ion-label>
       <ion-input></ion-input>
 
       <ion-button
-        @click="goToPropoosals()"
         color="danger"
         expand="block"
         strong="true"
-        href="/trips/proposals/"
-        >Search Connection</ion-button
+        href="/home/"
+        >Login</ion-button
       >
+
+      <ion-button
+        color="medium"
+        expand="block"
+        fill="outline"
+        strong="true"
+        href="/register/"
+        >Register</ion-button
+      >
+
     </div>
   </div>
 </template>
@@ -34,13 +43,6 @@ export default {
     IonLabel,
     IonInput,
     IonButton,
-  },
-
-  //inside the script section, define the function:
-  methods: {
-    goToPropoosals() {
-      this.$router.push("/trips/proposals");
-    },
   },
 };
 
